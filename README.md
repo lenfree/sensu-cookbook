@@ -21,3 +21,8 @@ berks install
 berks update
 berks upload
 ```
+
+Verify if server works:
+```
+curl <ip>:4567/info
+```

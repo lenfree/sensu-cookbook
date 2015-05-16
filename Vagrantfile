@@ -2,6 +2,7 @@
 # vi: set ft=ruby :
 
 # Vagrantfile API/syntax version. Don't touch unless you know what you're doing!
+# rubocop:disable all
 BOX_URL="centos6_min"
 
 VAGRANTFILE_API_VERSION = "2"

@@ -38,9 +38,12 @@ describe 'monitor::sensu' do
       expect(chef_run).to include_recipe('sensu::api_service')
     end
 
-#    it 'should notify sensu server' do
-#      resource = chef_run.package('sensu-server')
-#      expect(resource).to notify('service[sensu-server]').to(:restart)
-#    end
+    it 'should include sensu commmon recipe' do
+      expect(chef_run).to include_recipe('monitor::sensu_common')
+    end
+
+    it 'should include checks recipe' do
+      expect(chef_run).to include_recipe('monitor::checks')
+    end
   end
 end

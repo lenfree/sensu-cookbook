@@ -1,7 +1,7 @@
 default['sensu']['user'] = 'sensu'
 default['sensu']['group'] = 'sensu'
 default['sensu']['use_ssl'] = false
-default['sensu']['use_embedded_ruby'] = true
+default['sensu']['use_embedded_ruby'] = 'true'
 default['sensu']['rabbitmq']['host'] = '127.0.0.1'
 default['sensu']['rabbitmq']['vhost'] = 'sensu'
 default['sensu']['rabbitmq']['user'] = 'rabbitmq'

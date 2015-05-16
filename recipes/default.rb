@@ -6,3 +6,4 @@
 
 include_recipe 'monitor::user'
 include_recipe 'monitor::sensu'
+include_recipe 'monitor::sensu_common'
