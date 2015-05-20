@@ -14,10 +14,6 @@ describe 'monitor::default' do
       expect(chef_run).to include_recipe('monitor::user')
     end
 
-    it 'should include sensu recipe' do
-      expect(chef_run).to include_recipe('monitor::sensu')
-    end
-
     it 'should include user recipe' do
       expect(chef_run).to include_recipe('monitor::sensu_common')
     end
