@@ -10,7 +10,8 @@ Make sure you have chef-dk downloaded, chef.io account and configured knife.rb a
 Deploy:
 ```
 vagrant up monitor
-knife bootstrap <ip> --ssh-user vagrant --ssh-password vagrant --sudo --use-sudo-password --node-name sensu_server --run-list 'recipe[monitor::default]'
+knife bootstrap <ip> --ssh-user vagrant --ssh-password vagrant --sudo --use-sudo-password --node-name sensu_server --run-list 'recipe[monitor::sensu]'
+knife bootstrap <ip> --ssh-user vagrant --ssh-password vagrant --sudo --use-sudo-password --node-name web1 --run-list 'recipe[monitor::apache]'
 ```
 
 Development:
@@ -24,5 +25,6 @@ berks upload
 
 Verify if server works:
 ```
-curl <ip>:4567/info
+curl <sensu_ip>:4567/info
+curl <sensu_ip>:4567/clients
 ```
